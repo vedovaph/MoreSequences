@@ -26,9 +26,9 @@ def main():
     #     4. When satisfied with your work, move onto the next test.
     # ------------------------------------------------------------------
 
-    #run_test_generate_points_on_circle()
-    #run_test_draw_points_on_circle()
-    #run_test_pizza()
+    run_test_generate_points_on_circle()
+    run_test_draw_points_on_circle()
+    run_test_pizza()
     run_test_polygon()
     run_test_fancy_polygon()
 
@@ -588,6 +588,7 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color, th
                     index2 = index2 - number_of_lines
                 line = rg.Line(points[k], points[index2])
                 line.color = color
+                line.arrow = 'last'
                 line.thickness = thickness
                 line.attach_to(window)
         else:
@@ -596,6 +597,7 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color, th
                 index2 = index2 - number_of_lines
             line = rg.Line(points[k], points[index2])
             line.color = color
+            line.arrow = 'last'
             line.thickness = thickness
             line.attach_to(window)
     window.render()
